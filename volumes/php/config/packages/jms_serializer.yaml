@@ -1,0 +1,9 @@
+jms_serializer:
+    visitors:
+        json:
+            options: 0
+        xml:
+            format_output: false
+    handlers:
+        datetime:
+            default_format: "Y-m-d H:i:s"

@@ -1,0 +1,5 @@
+framework:
+    default_locale: fr
+    translator:
+        fallbacks: ['fr', 'en']
+        enabled: true

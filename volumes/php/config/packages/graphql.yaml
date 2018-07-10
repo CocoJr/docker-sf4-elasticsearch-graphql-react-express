@@ -1,0 +1,15 @@
+overblog_graphql:
+    definitions:
+        show_debug_info: false
+        mappings:
+            auto_discover: false
+            types:
+                -
+                    type: annotation
+                    dir: "%kernel.project_dir%/src/Entity"
+                    suffix: ~
+        schema:
+            query: RootQuery
+            mutation: RootMutation
+    security:
+        query_max_depth: 20

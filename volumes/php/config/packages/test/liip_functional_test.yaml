@@ -1,0 +1,8 @@
+parameters:
+    doctrine.dbal.connection_factory.class: Liip\FunctionalTestBundle\Factory\ConnectionFactory
+
+liip_functional_test:
+    paratest:
+        phpunit: '%kernel.project_dir%/bin/phpunit'
+    cache_db:
+        sqlite: liip_functional_test.services_database_backup.sqlite

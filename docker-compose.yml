@@ -1,0 +1,119 @@
+version: '2.1'
+services:
+    db:
+        image: mysql:5.7
+        env_file: .env
+        volumes:
+            - "db_volume:/var/lib/mysql"
+        restart: always
+        networks:
+            - app
+        expose:
+            - "${DATABASE_PORT}"
+
+    redis:
+        image: redis:4.0
+        env_file: .env
+        volumes:
+            - "redis_volume:/data"
+        restart: always
+        networks:
+            - app
+
+    php:
+        build:
+            context: ./php
+        env_file: .env
+        expose:
+          - "9091"
+        volumes:
+            - "./volumes/php:/home/docker"
+            - "./backend/default.template:/etc/nginx/conf.d/default.template:ro"
+        command: "php-fpm"
+        working_dir: "/home/docker"
+        restart: always
+        networks:
+            - app
+
+    node:
+        build:
+            context: ./node
+        env_file: .env
+        ports:
+            - "${FRONT_PORT}:8080"
+        volumes:
+            - "./volumes/node:/home/node/app"
+        command: "npm start"
+        user: "node"
+        working_dir: /home/node/app
+        restart: always
+        networks:
+            - app
+
+    backend:
+        image: nginx
+        env_file: .env
+        ports:
+            - "${GRAPHQL_PORT}:8080"
+        volumes_from:
+            - "php"
+        restart: always
+        command: /bin/bash -c "export DOLLAR='$$' && envsubst < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+        networks:
+            - app
+
+    elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:5.6.10
+        env_file: .env
+        ulimits:
+            memlock:
+                soft: -1
+                hard: -1
+        volumes:
+            - es1_volume:/usr/share/elasticsearch/data
+        expose:
+            - 9200
+        networks:
+            - app
+            - esnet
+
+    elasticsearch2:
+        image: docker.elastic.co/elasticsearch/elasticsearch:5.6.10
+        env_file: .env
+        environment:
+            - "discovery.zen.ping.unicast.hosts=elasticsearch:9200"
+        ulimits:
+            memlock:
+                soft: -1
+                hard: -1
+        volumes:
+            - es2_volume:/usr/share/elasticsearch/data
+        networks:
+            - esnet
+
+    kibana:
+        image: docker.elastic.co/kibana/kibana:5.6.10
+        env_file: .env
+        volumes:
+            - kibana_volume:/usr/share/kibana/config
+        networks:
+            - app
+            - esnet
+        ports:
+            - "${KIBANA_PORT}:5601"
+
+volumes:
+    db_volume:
+        driver: local
+    redis_volume:
+        driver: local
+    es1_volume:
+        driver: local
+    es2_volume:
+        driver: local
+    kibana_volume:
+        driver: local
+
+networks:
+    app:
+    esnet:

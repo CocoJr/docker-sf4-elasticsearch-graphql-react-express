@@ -1,0 +1,4 @@
+fos_elastica:
+    indexes:
+        app:
+            index_name: "app___DYNAMIC_NAME___%kernel.environment%"

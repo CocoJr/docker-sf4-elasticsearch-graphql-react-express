@@ -1,0 +1,138 @@
+{
+    "type": "project",
+    "license": "proprietary",
+    "repositories": [
+        {
+            "type": "vcs",
+            "name": "overblog/graphql-bundle",
+            "url": "https://github.com/CocoJr/GraphQLBundle"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "doctrine/doctrine-bundle": "^1.9",
+        "doctrine/doctrine-cache-bundle": "^1.3",
+        "doctrine/doctrine-migrations-bundle": "^1.0",
+        "doctrine/orm": "^2.6",
+        "friendsofsymfony/elastica-bundle": "^5.0",
+        "jms/serializer-bundle": "^2.4",
+        "nelmio/cors-bundle": "^1.5",
+        "overblog/graphql-bundle": "dev-master",
+        "predis/predis": "^1.0",
+        "sensio/framework-extra-bundle": "^5.2",
+        "snc/redis-bundle": "^2.1",
+        "stof/doctrine-extensions-bundle": "^1.3",
+        "symfony/console": "^4.1",
+        "symfony/flex": "^1.0",
+        "symfony/framework-bundle": "^4.1",
+        "symfony/lts": "^4@dev",
+        "symfony/security": "^4.1",
+        "symfony/security-bundle": "^4.1",
+        "symfony/validator": "^4.1",
+        "symfony/yaml": "^4.1"
+    },
+    "require-dev": {
+        "brianium/paratest": "^2.0",
+        "doctrine/doctrine-fixtures-bundle": "^3.0",
+        "liip/functional-test-bundle": "~2.0@alpha",
+        "overblog/graphiql-bundle": "dev-master",
+        "phpunit/phpunit": "^7.3",
+        "symfony/dotenv": "^4.1",
+        "symfony/maker-bundle": "^1.5",
+        "symfony/phpunit-bridge": "^4.1",
+        "symfony/test-pack": "^1.0"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
+    "scripts": {
+        "build-dev": [
+            "composer install",
+            "@auto-scripts",
+            "php bin/console graphql:compile",
+            "chmod -R 777 var/log var/cache"
+        ],
+        "build-test": [
+            "rm -rf var/cache/test/",
+            "APP_ENV=test php bin/console doctrine:cache:clear-m",
+            "APP_ENV=test php bin/console doctrine:cache:clear-query",
+            "APP_ENV=test php bin/console doctrine:cache:clear-result",
+            "APP_ENV=test php bin/console cache:clear --no-warmup",
+            "APP_ENV=test php bin/console assets:install",
+            "APP_ENV=test php bin/console doctrine:database:create",
+            "APP_ENV=test php bin/console doctrine:schema:drop --force",
+            "APP_ENV=test php bin/console doctrine:schema:update -f --dump-sql",
+            "APP_ENV=test php bin/console graphql:compile"
+        ],
+        "build-prod": [
+            "composer install",
+            "@auto-scripts",
+            "@install-db-prod",
+            "php bin/console graphql:compile",
+            "chmod -R 777 var/log var/cache"
+        ],
+        "install-dev": [
+            "@build-dev",
+            "@install-db-dev",
+            "chmod -R 777 var/log var/cache"
+        ],
+        "install-db-dev": [
+            "php bin/console doctrine:database:create --if-not-exists",
+            "php bin/console doctrine:schema:drop --force",
+            "php bin/console doctrine:migration:migrate --allow-no-migration -n",
+            "php bin/console doctrine:schema:update -f --dump-sql",
+            "php bin/console fos:elastica:reset",
+            "php bin/console doctrine:fixtures:load -n"
+        ],
+        "install-db-prod": [
+            "php bin/console doctrine:database:create --if-not-exists",
+            "php bin/console doctrine:migration:migrate --allow-no-migration -n"
+        ],
+        "auto-scripts": {
+            "doctrine:cache:clear-m": "symfony-cmd",
+            "doctrine:cache:clear-query": "symfony-cmd",
+            "doctrine:cache:clear-result": "symfony-cmd",
+            "cache:clear --no-warmup": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,30 @@
+security:
+    role_hierarchy:
+        ROLE_SUPERADMIN: ROLE_ADMIN
+        ROLE_ADMIN: ROLE_USER
+
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+
+    providers:
+        user_db_provider:
+            entity:
+                class: App\Entity\User
+        auth_token_user_provider:
+            id: auth_token_user_provider
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern: ^/
+            stateless: true
+            simple_preauth:
+                authenticator: auth_token_authenticator
+            provider: auth_token_user_provider
+            anonymous: ~
+            switch_user: { role: ROLE_ADMIN, parameter: _sudo }
+
+    access_control:

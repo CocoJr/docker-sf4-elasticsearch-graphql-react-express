@@ -1,0 +1,47 @@
+fos_elastica:
+    clients:
+        default:
+            host: elasticsearch
+            port: 9200
+            username: '%env(ELASTICSEARCH_USERNAME)%'
+            password: '%env(ELASTICSEARCH_PASSWORD)%'
+    serializer:
+        serializer: jms_serializer
+    indexes:
+        app:
+            client: default
+            finder: ~
+            index_name: app_%kernel.environment%
+            types:
+                user:
+                    date_detection: true
+                    dynamic_date_formats: ["yyyy-MM-dd HH:mm:ss"]
+                    properties:
+                        username:
+                            fielddata: true
+                        email:
+                            fielddata: true
+                    serializer:
+                        groups: [elastica]
+                        serialize_null: true
+                    persistence:
+                        driver: orm
+                        model: App\Entity\User
+                        provider: ~
+                        finder: ~
+                        repository: App\Repository\ES\UserRepository
+                file:
+                    date_detection: true
+                    dynamic_date_formats: ["YYYY-MM-DD HH:mm:ss"]
+                    properties:
+                        path:
+                            fielddata: true
+                    serializer:
+                        groups: [elastica]
+                        serialize_null: true
+                    persistence:
+                        driver: orm
+                        model: App\Entity\File
+                        provider: ~
+                        finder: ~
+                        repository: App\Repository\ES\FileRepository

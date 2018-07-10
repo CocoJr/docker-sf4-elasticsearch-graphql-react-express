@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="60" assertions="263" errors="1" failures="0" skipped="0" time="468.075056">
+    <testsuite name="App\Tests\GraphQL\Mutation\AdminUserMutationTest" file="/home/docker/tests/GraphQL/Mutation/AdminUserMutationTest.php" tests="2" assertions="16" errors="0" failures="0" skipped="0" time="52.933780">
+      <testsuite name="App\Tests\GraphQL\Mutation\AdminUserMutationTest::testEdit" tests="2" assertions="16" errors="0" failures="0" skipped="0" time="52.933780">
+        <testcase name="testEdit with data set #0" class="App\Tests\GraphQL\Mutation\AdminUserMutationTest" classname="App.Tests.GraphQL.Mutation.AdminUserMutationTest" file="/home/docker/tests/GraphQL/Mutation/AdminUserMutationTest.php" line="19" assertions="8" time="25.654440"/>
+        <testcase name="testEdit with data set #1" class="App\Tests\GraphQL\Mutation\AdminUserMutationTest" classname="App.Tests.GraphQL.Mutation.AdminUserMutationTest" file="/home/docker/tests/GraphQL/Mutation/AdminUserMutationTest.php" line="19" assertions="8" time="27.279340"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\GraphQL\Mutation\UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" tests="13" assertions="111" errors="0" failures="0" skipped="0" time="365.892666">
+      <testsuite name="App\Tests\GraphQL\Mutation\UserMutationTest::testCreate" tests="3" assertions="33" errors="0" failures="0" skipped="0" time="84.080201">
+        <testcase name="testCreate with data set #0" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="29" assertions="15" time="27.699925"/>
+        <testcase name="testCreate with data set #1" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="29" assertions="10" time="27.610216"/>
+        <testcase name="testCreate with data set #2" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="29" assertions="8" time="28.770060"/>
+      </testsuite>
+      <testsuite name="App\Tests\GraphQL\Mutation\UserMutationTest::testLogin" tests="5" assertions="50" errors="0" failures="0" skipped="0" time="145.850316">
+        <testcase name="testLogin with data set #0" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="93" assertions="13" time="29.038337"/>
+        <testcase name="testLogin with data set #1" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="93" assertions="8" time="29.127725"/>
+        <testcase name="testLogin with data set #2" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="93" assertions="13" time="29.795748"/>
+        <testcase name="testLogin with data set #3" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="93" assertions="8" time="29.066706"/>
+        <testcase name="testLogin with data set #4" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="93" assertions="8" time="28.821800"/>
+      </testsuite>
+      <testsuite name="App\Tests\GraphQL\Mutation\UserMutationTest::testUploadImgProfil" tests="5" assertions="28" errors="0" failures="0" skipped="0" time="135.962149">
+        <testcase name="testUploadImgProfil with data set #0" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="160" assertions="8" time="29.869260"/>
+        <testcase name="testUploadImgProfil with data set #1" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="160" assertions="4" time="29.793371"/>
+        <testcase name="testUploadImgProfil with data set #2" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="160" assertions="8" time="29.681173"/>
+        <testcase name="testUploadImgProfil with data set #3" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="160" assertions="4" time="30.556578"/>
+        <testcase name="testUploadImgProfil with data set #4" class="App\Tests\GraphQL\Mutation\UserMutationTest" classname="App.Tests.GraphQL.Mutation.UserMutationTest" file="/home/docker/tests/GraphQL/Mutation/UserMutationTest.php" line="160" assertions="4" time="16.061767"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\GraphQL\Resolver\AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" tests="11" assertions="35" errors="0" failures="0" skipped="0" time="7.716270">
+      <testsuite name="App\Tests\GraphQL\Resolver\AdminUserResolverTest::testGetAll" tests="6" assertions="15" errors="0" failures="0" skipped="0" time="4.380285">
+        <testcase name="testGetAll with data set #0" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="19" assertions="4" time="0.775176"/>
+        <testcase name="testGetAll with data set #1" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="19" assertions="4" time="0.741282"/>
+        <testcase name="testGetAll with data set #2" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="19" assertions="4" time="0.872226"/>
+        <testcase name="testGetAll with data set #3" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="19" assertions="1" time="0.673594"/>
+        <testcase name="testGetAll with data set #4" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="19" assertions="1" time="0.655122"/>
+        <testcase name="testGetAll with data set #5" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="19" assertions="1" time="0.662885"/>
+      </testsuite>
+      <testsuite name="App\Tests\GraphQL\Resolver\AdminUserResolverTest::testGet" tests="5" assertions="20" errors="0" failures="0" skipped="0" time="3.335985">
+        <testcase name="testGet with data set #0" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="73" assertions="6" time="0.659136"/>
+        <testcase name="testGet with data set #1" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="73" assertions="6" time="0.677400"/>
+        <testcase name="testGet with data set #2" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="73" assertions="6" time="0.683309"/>
+        <testcase name="testGet with data set #3" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="73" assertions="1" time="0.661582"/>
+        <testcase name="testGet with data set #4" class="App\Tests\GraphQL\Resolver\AdminUserResolverTest" classname="App.Tests.GraphQL.Resolver.AdminUserResolverTest" file="/home/docker/tests/GraphQL/Resolver/AdminUserResolverTest.php" line="73" assertions="1" time="0.654558"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\GraphQL\Resolver\UserResolverTest" file="/home/docker/tests/GraphQL/Resolver/UserResolverTest.php" tests="6" assertions="16" errors="0" failures="0" skipped="0" time="4.071999">
+      <testsuite name="App\Tests\GraphQL\Resolver\UserResolverTest::testGetLogged" tests="3" assertions="13" errors="0" failures="0" skipped="0" time="2.008428">
+        <testcase name="testGetLogged with data set #0" class="App\Tests\GraphQL\Resolver\UserResolverTest" classname="App.Tests.GraphQL.Resolver.UserResolverTest" file="/home/docker/tests/GraphQL/Resolver/UserResolverTest.php" line="18" assertions="1" time="0.666973"/>
+        <testcase name="testGetLogged with data set #1" class="App\Tests\GraphQL\Resolver\UserResolverTest" classname="App.Tests.GraphQL.Resolver.UserResolverTest" file="/home/docker/tests/GraphQL/Resolver/UserResolverTest.php" line="18" assertions="6" time="0.668752"/>
+        <testcase name="testGetLogged with data set #2" class="App\Tests\GraphQL\Resolver\UserResolverTest" classname="App.Tests.GraphQL.Resolver.UserResolverTest" file="/home/docker/tests/GraphQL/Resolver/UserResolverTest.php" line="18" assertions="6" time="0.672703"/>
+      </testsuite>
+      <testsuite name="App\Tests\GraphQL\Resolver\UserResolverTest::testLogout" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="2.063571">
+        <testcase name="testLogout with data set #0" class="App\Tests\GraphQL\Resolver\UserResolverTest" classname="App.Tests.GraphQL.Resolver.UserResolverTest" file="/home/docker/tests/GraphQL/Resolver/UserResolverTest.php" line="51" assertions="1" time="0.653747"/>
+        <testcase name="testLogout with data set #1" class="App\Tests\GraphQL\Resolver\UserResolverTest" classname="App.Tests.GraphQL.Resolver.UserResolverTest" file="/home/docker/tests/GraphQL/Resolver/UserResolverTest.php" line="51" assertions="1" time="0.673196"/>
+        <testcase name="testLogout with data set #2" class="App\Tests\GraphQL\Resolver\UserResolverTest" classname="App.Tests.GraphQL.Resolver.UserResolverTest" file="/home/docker/tests/GraphQL/Resolver/UserResolverTest.php" line="51" assertions="1" time="0.736628"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\Service\UserRepositoryTest" file="/home/docker/tests/Repository/UserRepositoryTest.php" tests="4" assertions="14" errors="0" failures="0" skipped="0" time="2.768083">
+      <testsuite name="App\Tests\Service\UserRepositoryTest::testLoadUserByUsername" tests="4" assertions="14" errors="0" failures="0" skipped="0" time="2.768083">
+        <testcase name="testLoadUserByUsername with data set #0" class="App\Tests\Service\UserRepositoryTest" classname="App.Tests.Service.UserRepositoryTest" file="/home/docker/tests/Repository/UserRepositoryTest.php" line="22" assertions="6" time="0.688421"/>
+        <testcase name="testLoadUserByUsername with data set #1" class="App\Tests\Service\UserRepositoryTest" classname="App.Tests.Service.UserRepositoryTest" file="/home/docker/tests/Repository/UserRepositoryTest.php" line="22" assertions="6" time="0.705238"/>
+        <testcase name="testLoadUserByUsername with data set #2" class="App\Tests\Service\UserRepositoryTest" classname="App.Tests.Service.UserRepositoryTest" file="/home/docker/tests/Repository/UserRepositoryTest.php" line="22" assertions="1" time="0.677527"/>
+        <testcase name="testLoadUserByUsername with data set #3" class="App\Tests\Service\UserRepositoryTest" classname="App.Tests.Service.UserRepositoryTest" file="/home/docker/tests/Repository/UserRepositoryTest.php" line="22" assertions="1" time="0.696897"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\Service\AuthTokenAuthenticatorTest" file="/home/docker/tests/Security/AuthTokenAuthenticatorTest.php" tests="9" assertions="35" errors="0" failures="0" skipped="0" time="6.223541">
+      <testsuite name="App\Tests\Service\AuthTokenAuthenticatorTest::testCreateToken" tests="3" assertions="7" errors="0" failures="0" skipped="0" time="2.061007">
+        <testcase name="testCreateToken with data set #0" class="App\Tests\Service\AuthTokenAuthenticatorTest" classname="App.Tests.Service.AuthTokenAuthenticatorTest" file="/home/docker/tests/Security/AuthTokenAuthenticatorTest.php" line="27" assertions="1" time="0.684786"/>
+        <testcase name="testCreateToken with data set #1" class="App\Tests\Service\AuthTokenAuthenticatorTest" classname="App.Tests.Service.AuthTokenAuthenticatorTest" file="/home/docker/tests/Security/AuthTokenAuthenticatorTest.php" line="27" assertions="3" time="0.679692"/>
+        <testcase name="testCreateToken with data set #2" class="App\Tests\Service\AuthTokenAuthenticatorTest" classname="App.Tests.Service.AuthTokenAuthenticatorTest" file="/home/docker/tests/Security/AuthTokenAuthenticatorTest.php" line="27" assertions="3" time="0.696529"/>
+      </testsuite>
+      <testsuite name="App\Tests\Service\AuthTokenAuthenticatorTest::testAuthenticateToken" tests="5" assertions="27" errors="0" failures="0" skipped="0" time="3.485726">
+        <testcase name="testAuthenticateToken with data set #0" class="App\Tests\Service\AuthTokenAuthenticatorTest" classname="App.Tests.Service.AuthTokenAuthenticatorTest" file="/home/docker/tests/Security/AuthTokenAuthenticatorTest.php" line="71" assertions="1" time="0.674934"/>
+        <testcase name="testAuthenticateToken with data set #1" class="App\Tests\Service\AuthTokenAuthenticatorTest" classname="App.Tests.Service.AuthTokenAuthenticatorTest" file="/home/docker/tests/Security/AuthTokenAuthenticatorTest.php" line="71" assertions="11" time="0.699565"/>
+        <testcase name="testAuthenticateToken with data set #2" class="App\Tests\Service\AuthTokenAuthenticatorTest" classname="App.Tests.Service.AuthTokenAuthenticatorTest" file="/home/docker/tests/Security/AuthTokenAuthenticatorTest.php" line="71" assertions="11" time="0.680064"/>
+        <testcase name="testAuthenticateToken with data set #3" class="App\Tests\Service\AuthTokenAuthenticatorTest" classname="App.Tests.Service.AuthTokenAuthenticatorTest" file="/home/docker/tests/Security/AuthTokenAuthenticatorTest.php" line="71" assertions="2" time="0.741294"/>
+        <testcase name="testAuthenticateToken with data set #4" class="App\Tests\Service\AuthTokenAuthenticatorTest" classname="App.Tests.Service.AuthTokenAuthenticatorTest" file="/home/docker/tests/Security/AuthTokenAuthenticatorTest.php" line="71" assertions="2" time="0.689869"/>
+      </testsuite>
+      <testcase name="testOnAuthenticationFailure" class="App\Tests\Service\AuthTokenAuthenticatorTest" classname="App.Tests.Service.AuthTokenAuthenticatorTest" file="/home/docker/tests/Security/AuthTokenAuthenticatorTest.php" line="139" assertions="1" time="0.676808"/>
+    </testsuite>
+    <testsuite name="App\Tests\Service\AuthTokenUserProviderTest" file="/home/docker/tests/Security/AuthTokenUserProviderTest.php" tests="9" assertions="27" errors="0" failures="0" skipped="0" time="6.241776">
+      <testsuite name="App\Tests\Service\AuthTokenUserProviderTest::testGetAuthToken" tests="3" assertions="11" errors="0" failures="0" skipped="0" time="2.087446">
+        <testcase name="testGetAuthToken with data set #0" class="App\Tests\Service\AuthTokenUserProviderTest" classname="App.Tests.Service.AuthTokenUserProviderTest" file="/home/docker/tests/Security/AuthTokenUserProviderTest.php" line="24" assertions="1" time="0.672473"/>
+        <testcase name="testGetAuthToken with data set #1" class="App\Tests\Service\AuthTokenUserProviderTest" classname="App.Tests.Service.AuthTokenUserProviderTest" file="/home/docker/tests/Security/AuthTokenUserProviderTest.php" line="24" assertions="5" time="0.688175"/>
+        <testcase name="testGetAuthToken with data set #2" class="App\Tests\Service\AuthTokenUserProviderTest" classname="App.Tests.Service.AuthTokenUserProviderTest" file="/home/docker/tests/Security/AuthTokenUserProviderTest.php" line="24" assertions="5" time="0.726798"/>
+      </testsuite>
+      <testsuite name="App\Tests\Service\AuthTokenUserProviderTest::testLoadUserByUsername" tests="3" assertions="13" errors="0" failures="0" skipped="0" time="2.054042">
+        <testcase name="testLoadUserByUsername with data set #0" class="App\Tests\Service\AuthTokenUserProviderTest" classname="App.Tests.Service.AuthTokenUserProviderTest" file="/home/docker/tests/Security/AuthTokenUserProviderTest.php" line="60" assertions="1" time="0.679285"/>
+        <testcase name="testLoadUserByUsername with data set #1" class="App\Tests\Service\AuthTokenUserProviderTest" classname="App.Tests.Service.AuthTokenUserProviderTest" file="/home/docker/tests/Security/AuthTokenUserProviderTest.php" line="60" assertions="6" time="0.696068"/>
+        <testcase name="testLoadUserByUsername with data set #2" class="App\Tests\Service\AuthTokenUserProviderTest" classname="App.Tests.Service.AuthTokenUserProviderTest" file="/home/docker/tests/Security/AuthTokenUserProviderTest.php" line="60" assertions="6" time="0.678689"/>
+      </testsuite>
+      <testsuite name="App\Tests\Service\AuthTokenUserProviderTest::testSupportsClass" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="2.100288">
+        <testcase name="testSupportsClass with data set #0" class="App\Tests\Service\AuthTokenUserProviderTest" classname="App.Tests.Service.AuthTokenUserProviderTest" file="/home/docker/tests/Security/AuthTokenUserProviderTest.php" line="99" assertions="1" time="0.697616"/>
+        <testcase name="testSupportsClass with data set #1" class="App\Tests\Service\AuthTokenUserProviderTest" classname="App.Tests.Service.AuthTokenUserProviderTest" file="/home/docker/tests/Security/AuthTokenUserProviderTest.php" line="99" assertions="1" time="0.689587"/>
+        <testcase name="testSupportsClass with data set #2" class="App\Tests\Service\AuthTokenUserProviderTest" classname="App.Tests.Service.AuthTokenUserProviderTest" file="/home/docker/tests/Security/AuthTokenUserProviderTest.php" line="99" assertions="1" time="0.713085"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\Service\RequestThrottlingTest" file="/home/docker/tests/Security/RequestThrottlingTest.php" tests="4" assertions="8" errors="0" failures="0" skipped="0" time="5.887873">
+      <testsuite name="App\Tests\Service\RequestThrottlingTest::testOnKernelRequest" tests="4" assertions="8" errors="0" failures="0" skipped="0" time="5.887873">
+        <testcase name="testOnKernelRequest with data set #0" class="App\Tests\Service\RequestThrottlingTest" classname="App.Tests.Service.RequestThrottlingTest" file="/home/docker/tests/Security/RequestThrottlingTest.php" line="24" assertions="2" time="1.543685"/>
+        <testcase name="testOnKernelRequest with data set #1" class="App\Tests\Service\RequestThrottlingTest" classname="App.Tests.Service.RequestThrottlingTest" file="/home/docker/tests/Security/RequestThrottlingTest.php" line="24" assertions="2" time="1.503873"/>
+        <testcase name="testOnKernelRequest with data set #2" class="App\Tests\Service\RequestThrottlingTest" classname="App.Tests.Service.RequestThrottlingTest" file="/home/docker/tests/Security/RequestThrottlingTest.php" line="24" assertions="2" time="1.201835"/>
+        <testcase name="testOnKernelRequest with data set #3" class="App\Tests\Service\RequestThrottlingTest" classname="App.Tests.Service.RequestThrottlingTest" file="/home/docker/tests/Security/RequestThrottlingTest.php" line="24" assertions="2" time="1.638480"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\Service\RequestLanguageTest" file="/home/docker/tests/Service/RequestLanguageTest.php" tests="2" assertions="1" errors="1" failures="0" skipped="0" time="16.339066">
+      <testsuite name="App\Tests\Service\RequestLanguageTest::testOnKernelRequest" tests="2" assertions="1" errors="1" failures="0" skipped="0" time="16.339066">
+        <testcase name="testOnKernelRequest with data set #0" class="App\Tests\Service\RequestLanguageTest" classname="App.Tests.Service.RequestLanguageTest" file="/home/docker/tests/Service/RequestLanguageTest.php" line="23" assertions="1" time="0.752171"/>
+        <testcase name="testOnKernelRequest with data set #1" class="App\Tests\Service\RequestLanguageTest" classname="App.Tests.Service.RequestLanguageTest" file="/home/docker/tests/Service/RequestLanguageTest.php" line="23" assertions="0" time="15.586895">
+          <error type="PHPUnit\Framework\Error\Notice">App\Tests\Service\RequestLanguageTest::testOnKernelRequest with data set #1 (Symfony\Component\HttpKernel\Event\GetResponseEvent Object (...), 'fr')
+Undefined index: path
+
+/home/docker/vendor/liip/functional-test-bundle/src/Factory/ConnectionFactory.php:41
+/home/docker/var/cache/test/ContainerZyqUejz/getDoctrine_Dbal_DefaultConnectionService.php:14
+/home/docker/var/cache/test/ContainerZyqUejz/srcTestDebugProjectContainer.php:428
+/home/docker/var/cache/test/ContainerZyqUejz/getDoctrine_Orm_DefaultEntityManagerService.php:14
+/home/docker/var/cache/test/ContainerZyqUejz/srcTestDebugProjectContainer.php:428
+/home/docker/vendor/symfony/dependency-injection/Container.php:240
+/home/docker/vendor/symfony/dependency-injection/Container.php:222
+/home/docker/vendor/symfony/doctrine-bridge/ManagerRegistry.php:35
+/home/docker/vendor/doctrine/persistence/lib/Doctrine/Common/Persistence/AbstractManagerRegistry.php:200
+/home/docker/vendor/symfony/doctrine-bridge/CacheWarmer/ProxyCacheWarmer.php:49
+/home/docker/vendor/symfony/http-kernel/CacheWarmer/CacheWarmerAggregate.php:57
+/home/docker/vendor/symfony/http-kernel/Kernel.php:562
+/home/docker/vendor/symfony/http-kernel/Kernel.php:123
+/home/docker/vendor/liip/functional-test-bundle/src/Test/WebTestCase.php:219
+/home/docker/tests/WebTestCase.php:32
+</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

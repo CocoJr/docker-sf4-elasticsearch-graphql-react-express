@@ -1,0 +1,4 @@
+overblog_graphql:
+    definitions:
+        use_classloader_listener: false
+        auto_compile: false

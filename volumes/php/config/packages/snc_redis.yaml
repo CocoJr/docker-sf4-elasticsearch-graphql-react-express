@@ -1,0 +1,34 @@
+snc_redis:
+    clients:
+        default:
+            type: "predis"
+            alias: "default"
+            dsn: "redis://redis"
+            logging: "%kernel.debug%"
+        cache:
+            type: "predis"
+            alias: "cache"
+            dsn: "redis://redis/1"
+            logging: false
+        session:
+            type: "predis"
+            alias: "session"
+            dsn: "redis://redis/2"
+            logging: false
+    session:
+        client: "session"
+        prefix: "SESS"
+    doctrine:
+        metadata_cache:
+            client: "cache"
+            entity_manager: "default"
+            document_manager: "default"
+        result_cache:
+            client: "cache"
+            entity_manager: "default"
+        query_cache:
+            client: "cache"
+            entity_manager: "default"
+        second_level_cache:
+            client: "cache"
+            entity_manager: "default"

@@ -1,0 +1,50 @@
+# configuration for express
+server {
+    listen 80 default_server;
+
+    server_name ${APP_HOSTNAME};
+
+    location / {
+        proxy_pass         http://node:8081;
+        proxy_http_version 1.1;
+    }
+}
+
+# configuration for sf4 (graphql)
+server {
+    listen 8080;
+
+    server_name ${APP_HOSTNAME};
+
+    root /home/docker/public;
+
+    rewrite ^/index\.php/?(.*)$ /$1 permanent;
+
+    gzip on;
+    gzip_buffers 4 32k;
+    gzip_min_length 1100;
+    gzip_types text/plain application/x-javascript text/xml text/css;
+    gzip_vary on;
+	
+	client_max_body_size 64M;
+
+    location / {
+        try_files ${DOLLAR}uri @rewriteapp;
+    }
+
+    location ~ ^/index\.php(/|$) {
+        fastcgi_pass php:9000;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME ${DOLLAR}document_root${DOLLAR}fastcgi_script_name;
+        fastcgi_param HTTPS on;
+    }
+
+    location ~ \.php$ {
+      return 404;
+    }
+
+    location @rewriteapp {
+        rewrite ^(.*)$ /index.php/$1 last;
+    }
+}
